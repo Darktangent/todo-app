@@ -7,7 +7,7 @@ let db
 
 let port = process.env.PORT || 3000
 app.use(express.static('public'))
-let connectionString=`mongodb+srv://todoApp:Testing32@cluster0-aulz6.mongodb.net/TodoApp?retryWrites=true&w=majority`
+let connectionString=`mongodb+srv://todoApp:""@cluster0-aulz6.mongodb.net/TodoApp?retryWrites=true&w=majority`
 mongodb.connect(connectionString,{useNewUrlParser:true,useUnifiedTopology:true},(err,client)=>{
   db=client.db()
 
